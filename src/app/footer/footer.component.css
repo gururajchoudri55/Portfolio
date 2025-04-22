@@ -1,0 +1,32 @@
+
+.app-footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 1.5rem ;
+    border-top: 1px solid #333;
+/* height: 10vh; */
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* for responsiveness */
+    }
+
+    .footer-left {
+        font-size: 0.9rem;
+    }
+
+    .footer-right {
+        a {
+            color: #ffffff;
+            margin-left: 4rem;
+            font-size: 1.4rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #90caf9;
+            }
+        }
+    }
+}

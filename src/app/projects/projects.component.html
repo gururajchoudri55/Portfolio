@@ -1,28 +1,19 @@
-<section id="projects">
-    <div class="container">
-      <h2 class="text-center">Projects</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/project1.jpg" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project Name</h5>
-              <p class="card-text">Short description of the project.</p>
-              <a href="https://github.com/yourproject" class="btn btn-primary">View on GitHub</a>
-            </div>
-          </div>
+<section class="container py-5">
+  <h2 class="text-center mb-5">My Projects</h2>
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let project of projects">
+      <div class="timeline-item shadow" data-aos="zoom-in">
+        <div class="project-icon text-center">
+          <i class="bi {{ project.icon }} display-4"></i>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="assets/project2.jpg" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Another Project</h5>
-              <p class="card-text">Short description of the project.</p>
-              <a href="https://github.com/yourproject" class="btn btn-primary">View on GitHub</a>
-            </div>
-          </div>
+        <div class="content">
+          <h4>{{ project.title }}</h4>
+          <p class="short-desc">{{ project.shortDesc }}</p>
+          <p class="full-desc">{{ project.fullDesc }}</p>
+          <!-- <a [href]="project.github" target="_blank" class="btn btn-primary">View on GitHub</a> -->
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
