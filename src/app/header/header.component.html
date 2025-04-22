@@ -1,21 +1,24 @@
 <header class="app-header">
-    <nav class="navbar">
-      <!-- Left segment: Icon + Name -->
-      <div class="nav-left">
-        <span class="logo">
-          <!-- <i class="material-icons">person</i> -->
-          <!-- <i class="bi bi-H-square-fill"></i> -->
-          <i class="bi bi-wind"></i>
-          <span class="name">Guru</span>
-        </span>
-      </div>
-  
-      <!-- Right segment: Navigation Links -->
-      <div class="nav-right">
-        <a routerLink="/" routerLinkActive="active">Home</a>
-        <a routerLink="/about" routerLinkActive="active">About</a>
-        <a routerLink="/projects" routerLinkActive="active">Projects</a>
-        <a routerLink="/contact" routerLinkActive="active">Contact</a>
-      </div>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <!-- Left segment: Icon + Name -->
+    <div class="nav-left ">
+      <span class="logo">
+        <i class="bi bi-wind"></i>
+        <span class="name">Guru</span>
+      </span>
+    </div>
+
+    <!-- Toggle button for mobile -->
+    <button class="nav-toggle" (click)="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Right segment: Navigation Links -->
+    <div class="nav-right" [class.open]="menuOpen">
+      <a routerLink="/*" (click)="menuOpen = false" routerLinkActive="active">Home</a>
+      <a routerLink="/about"  (click)="menuOpen = false"routerLinkActive="active">About</a>
+      <a routerLink="/projects"  (click)="menuOpen = false"routerLinkActive="active">Projects</a>
+      <a routerLink="/contact"  (click)="menuOpen = false" routerLinkActive="active">Contact</a>
+    </div>
+  </nav>
+</header>
