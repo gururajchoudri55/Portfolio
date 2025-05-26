@@ -40,18 +40,15 @@
 </header> -->
 <header class="app-header">
   <nav class="navbar">
-   
-    <div class="nav-left" >
+    <div class="nav-left">
       <button class="nav-toggle" (click)="toggleMenu()">&#9776;</button>
     </div>
 
     <div class="nav-right" [class.open]="menuOpen">
-
       <a (click)="scrollTo('home')">Home</a>
       <a (click)="scrollTo('about')">About</a>
       <a (click)="scrollTo('projects')">Projects</a>
       <a (click)="scrollTo('contact')">Contact</a>
-
     </div>
   </nav>
 </header>
